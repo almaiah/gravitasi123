@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Petunjuk Penggunaan Website - Hukum Newton tentang Gravitasi</title>
+    <meta name="description" content="Petunjuk penggunaan website interaktif tentang Hukum Newton dan hukum Kepler." />
+    <style>
+        /* Reset dan dasar */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav#nav {
+            background-color: #144552;
+            padding: 12px 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        nav#nav .nav-button {
+            color: #a9d6e5;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        nav#nav .nav-button:hover,
+        nav#nav .nav-button[aria-current="page"] {
+            background-color: #3caea3;
+            color: #fff;
+        }
+
+        main.content {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: rgba(255 255 255 / 0.05);
+            border-radius: 10px;
+            padding: 30px 40px;
+            box-shadow: 0 0 15px rgb(60 174 163 / 0.4);
+        }
+
+        main.content h1 {
+            font-size: 2.4rem;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 0 0 8px #3caea3;
+        }
+
+        main.content p.intro {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            text-align: center;
+            color: #b8e0d2;
+        }
+
+        ol.steps {
+            list-style: none;
+            counter-reset: step-counter;
+            padding-left: 0;
+        }
+
+        ol.steps li {
+            background: rgba(60, 174, 163, 0.15);
+            border-radius: 8px;
+            padding: 20px 25px 20px 70px;
+            margin-bottom: 18px;
+            position: relative;
+            box-shadow: 0 0 10px rgba(60,174,163,0.25);
+            transition: background-color 0.3s ease;
+        }
+
+        ol.steps li:hover {
+            background-color: rgba(60, 174, 163, 0.3);
+        }
+
+        ol.steps li::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #3caea3;
+            color: white;
+            width: 40px;
+            height: 40px;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 0 8px #3caea3;
+        }
+
+        ol.steps li strong {
+            display: block;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: #e0f7f7;
+        }
+
+        ol.steps li p {
+            margin: 0;
+            color: #d4f1f4;
+        }
+
+        /* Emoji styling */
+        ol.steps li:nth-child(1)::before { content: "🟢"; }
+        ol.steps li:nth-child(2)::before { content: "🎯"; }
+        ol.steps li:nth-child(3)::before { content: "📚"; }
+        ol.steps li:nth-child(4)::before { content: "📝"; }
+        ol.steps li:nth-child(5)::before { content: "🔍"; }
+        ol.steps li:nth-child(6)::before { content: "📖"; }
+        ol.steps li:nth-child(7)::before { content: "✉️"; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            main.content {
+                padding: 20px 15px;
+            }
+            ol.steps li {
+                padding-left: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi utama -->
+    <nav id="nav" aria-label="Navigasi utama">
+        <a href="Home.html" class="nav-button">Home</a>
+        <a href="Kompetensi.html" class="nav-button">Kompetensi</a>
+        <a href="Petunjuk-Penggunaan-Website.html" class="nav-button" aria-current="page">Petunjuk Penggunaan Website</a>
+        <a href="Materi-Pembelajaran.html" class="nav-button">Materi Pembelajaran</a>
+        <a href="Latihan-Soal.html" class="nav-button">Latihan Soal</a>
+        <a href="Kunci-Jawaban.html" class="nav-button">Kunci Jawaban</a>
+        <a href="Glosarium.html" class="nav-button">Glosarium</a>
+        <a href="Tentang-Penulis.html" class="nav-button">Tentang Penulis</a>
+    </nav>
+
+    <!-- Konten utama -->
+    <main class="content" role="main">
+        <h1>🧭 Petunjuk Penggunaan Website</h1>
+        <p class="intro">Selamat datang di website pembelajaran <strong>Hukum Gravitasi Newton</strong>! Ikuti langkah-langkah berikut untuk memaksimalkan pengalaman belajar Anda:</p>
+
+        <ol class="steps" aria-label="Langkah-langkah penggunaan website">
+            <li>
+                <strong>Mulai dari Halaman Utama</strong>
+                <p>Bacalah pengantar di halaman utama untuk memahami tujuan dari website ini serta gambaran umum tentang apa yang akan dipelajari.</p>
+            </li>
+            <li>
+                <strong>Lihat Kompetensi</strong>
+                <p>Klik menu "Kompetensi" untuk mengetahui tujuan pembelajaran dan kemampuan yang diharapkan setelah Anda menyelesaikan materi.</p>
+            </li>
+            <li>
+                <strong>Pelajari Materi</strong>
+                <p>Masuk ke menu "Materi Pembelajaran" untuk mempelajari konsep hukum gravitasi Newton. Materi disajikan dalam bentuk teks, ilustrasi, dan video interaktif.</p>
+            </li>
+            <li>
+                <strong>Latihan Soal</strong>
+                <p>Setelah memahami materi, buka menu "Latihan Soal" untuk menguji pemahaman Anda. Soal disertai pilihan ganda dan pertanyaan reflektif.</p>
+            </li>
+            <li>
+                <strong>Periksa Jawaban</strong>
+                <p>Gunakan menu "Kunci Jawaban" untuk mencocokkan jawaban Anda dan memahami penjelasannya.</p>
+            </li>
+            <li>
+                <strong>Gunakan Glosarium</strong>
+                <p>Jika Anda menemukan istilah baru, klik menu "Glosarium" untuk melihat definisi dan penjelasan istilah-istilah penting.</p>
+            </li>
+            <li>
+                <strong>Kenali Penulis &amp; Sampaikan Masukan</strong>
+                <p>Klik "Tentang Penulis" untuk mengenal siapa yang menyusun materi ini.<br />Di bagian ini, Anda juga dapat mengisi formulir Kritik dan Saran sebagai masukan untuk perbaikan dan pengembangan website ke depannya.</p>
+            </li>
+        </ol>
+    </main>
+
+</body>
+</html>

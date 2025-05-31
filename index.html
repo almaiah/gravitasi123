@@ -1,0 +1,84 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0;url=Welcome-Splash-Screen.html">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <p>If you are not redirected automatically, <a href="Welcome-Splash-Screen.html">click here</a>.</p>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Hukum Newton tentang Gravitasi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/splash.css">
+    <link rel="stylesheet" href="css/Style-Kepler.css">
+    <script src="js/splash.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.module.js"
+        }
+      }
+    </script>
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <div id="splash-logo"></div>
+        <div class="splash-text">Hukum Newton tentang Gravitasi</div>
+    </div>
+
+    <nav id="nav">
+        <a href="Home.html" class="nav-button">Home</a>
+        <a href="Kompetensi.html" class="nav-button">Kompetensi</a>
+        <a href="Petunjuk-Penggunaan-Website.html" class="nav-button">Petunjuk Penggunaan Website</a>
+        <a href="Materi-Pembelajaran.html" class="nav-button">Materi Pembelajaran</a>
+        <a href="Latihan-Soal.html" class="nav-button">Latihan Soal</a>
+        <a href="Kunci-Jawaban.html" class="nav-button">Kunci Jawaban</a>
+        <a href="Glosarium.html" class="nav-button">Glosarium</a>
+        <a href="Tentang-Penulis.html" class="nav-button">Tentang Penulis</a>
+    </nav>
+
+    <!-- Solar System Visualization -->
+    <div id="solar-system"></div>
+
+
+
+    <!-- Info Panel -->
+    <div id="info-panel">
+        <button class="close-btn">&times;</button>
+        <div class="info-header">
+            <div class="planet-icon" id="selected-planet-icon"></div>
+            <h2 class="planet-title" id="selected-planet-name">Object Name</h2>
+        </div>
+        <div class="info-content" id="planet-info"></div>
+        <div class="adjust-panel" id="adjust-form" style="display: none;">
+            <h3>Adjust Parameters</h3>
+            <div class="input-group">
+                <label for="adjust-eccentricity">Eccentricity</label>
+                <input type="range" id="adjust-eccentricity" min="0" max="0.9" step="0.01">
+                <div class="value-display" id="adjust-ecc-value"></div>
+            </div>
+            <div class="input-group">
+                <label for="adjust-semi-major">Semi-major Axis Multiplier</label>
+                <input type="range" id="adjust-semi-major" min="0.5" max="2" step="0.1" value="1">
+                <div class="value-display" id="adjust-semi-value"></div>
+            </div>
+            <div class="button-group">
+                <button id="reset-adjust">Reset Adjustments</button>
+                <button id="follow-planet">Follow Planet</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/script-solar-system.js"></script>
+</body>
+</html>

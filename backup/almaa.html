@@ -1,0 +1,219 @@
+<!-- Welcome Splash Screen -->
+</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="icon" href="texture/icon.svg" type="image/svg+xml" />
+    <!-- Import map for modules -->
+     
+    <!-- <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.module.js"
+        }
+      }
+    </script> -->
+
+    <title>Kepler's & Newton's Laws: Solar System Explorer</title>
+    <link rel="stylesheet" href="Style-Kepler.css">
+    <!-- <style>    </style> -->
+  </head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Whirlpool Galaxy (M51)</title>
+  <link rel="stylesheet" href="Style-The-Whirlpool-Galaxy.css">
+  <!-- <style>
+    
+  </style> -->
+
+<script src="Script-The-Whirlpool-Galaxy.js"></script>
+
+</body>
+</html>
+
+  <body>
+
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+      <div id="splash-logo"></div>
+      <div class="splash-text">Hukum Newton tentang Gravitasi</div>
+    </div>
+    <!-- Main Container -->
+    
+      <!-- Solar System Visualization -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Whirlpool Galaxy (M51)</title>
+  <link rel="stylesheet" href="Style-The-Whirlpool-Galaxy.css">
+  <style></style>
+
+<body>
+  <div class="center-image">
+    <vid src="http://jpl.nasa.gov/edu/images/videos/inasnap_solarsystem.jpg" 
+         alt="The Whirlpool Galaxy (M51)">
+  </div>
+<script>
+  function closeWelcome() {
+    const welcome = document.getElementById("welcome-screen");
+    welcome.style.transition = "opacity 1s ease-out";
+    welcome.style.opacity = 0;
+    setTimeout(() => {
+      welcome.style.display = "none";
+    }, 1000);
+  }
+
+  // Optional: auto-close after beberapa detik (misal 6 detik)
+  // setTimeout(closeWelcome, 6000);
+</script>
+</body>
+</html>
+
+      <div id="solar-system"></div>
+      <!-- Controls Panel -->
+      <div id="controls">
+        <button id="close-controls">×</button>
+      </div>
+      <!-- Info Panel -->
+      <div id="info-panel">
+        <button class="close-btn">&times;</button>
+        <div class="info-header">
+          <div class="planet-icon" id="selected-planet-icon"></div>
+          <h2 class="planet-title" id="selected-planet-name">Object Name</h2>
+        </div>
+        <div class="info-content" id="planet-info"></div>
+        <!-- Adjust Panel -->
+        <div class="adjust-panel" id="adjust-form" style="display: none;">
+          <h3>Adjust Parameters</h3>
+          <div class="input-group">
+            <label for="adjust-eccentricity">Eccentricity</label>
+            <input type="range" id="adjust-eccentricity" min="0" max="0.9" step="0.01" />
+            <div class="value-display" id="adjust-ecc-value"></div>
+          </div>
+          <div class="input-group">
+            <label for="adjust-semi-major">Semi-major Axis Multiplier</label>
+            <input type="range" id="adjust-semi-major" min="0.5" max="2" step="0.1" value="1" />
+            <div class="value-display" id="adjust-semi-value"></div>
+          </div>
+          <div class="button-group">
+            <button id="reset-adjust">Reset Adjustments</button>
+            <button id="follow-planet">Follow Planet</button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+<!-- Script untuk toggle tampilkan bagian kompetensi -->
+<script src="Script-Kompetisi.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+
+      <!-- Kepler's Laws Section -->
+      <div id="kepler-laws">
+        <!-- Lesson Visualizations-->
+        <div class="law-container">
+          <h2>Newton's Law of Universal Gravitation</h2>
+          <div class="law-content">
+            <div class="law-text">
+              <p>
+                Newton discovered that every mass attracts every other mass.
+                This gravitational force is given by:
+              </p>
+              <p style="text-align:center;">
+                <strong>F = G (m₁ m₂) / r²</strong>
+              </p>
+              <p>
+                Tap the canvas to freeze/unfreeze the scene and see the force
+                relation.
+              </p>
+            </div>
+            <div class="law-viz" id="newton-law-viz">
+              <div class="loading"></div>
+            </div>
+          </div>
+        </div>
+        <div class="law-container">
+          <h2>Kepler's First Law: Elliptical Orbits</h2>
+          <div class="law-content">
+            <div class="law-text">
+              <p>
+                Planets orbit in ellipses with the Sun at one focus. The ellipse
+                is defined by its semi-major axis (a) and eccentricity (e).
+              </p>
+              <p>Tap to freeze the motion and view current parameters.</p>
+            </div>
+            <div class="law-viz" id="first-law-viz">
+              <div class="loading"></div>
+            </div>
+          </div>
+        </div>
+        <div class="law-container">
+          <h2>Kepler's Second Law: Equal Areas</h2>
+          <div class="law-content">
+            <div class="law-text">
+              <p>
+                A line joining a planet and the Sun sweeps out equal areas in
+                equal time intervals.
+              </p>
+              <p>Tap the red sector to freeze the sweep and display area.</p>
+            </div>
+            <div class="law-viz" id="second-law-viz">
+              <div class="loading"></div>
+            </div>
+          </div>
+        </div>
+        <div class="law-container">
+          <h2>Kepler's Third Law: Harmonies</h2>
+          <div class="law-content">
+            <div class="law-text">
+              <p>
+                T² ∝ a³: The square of the orbital period is proportional to the
+                cube of its semi-major axis.
+              </p>
+              <p>Tap to freeze two planets’ motion and view period ratio.</p>
+            </div>
+            <div class="law-viz" id="third-law-viz">
+              <div class="loading"></div>
+            </div>
+          </div>
+        </div>
+        <div class="law-container">
+          <h2>Example: Mercury's Orbital Period</h2>
+          <div class="law-content">
+            <div class="law-text">
+              <p>
+                For Mercury (distance 0.4 AU) versus Earth (1 year), Kepler’s Third
+                Law gives:
+              </p>
+              <p style="text-align:center;">
+                Tₑ² / 1³ = Tₘ² / (0.4)³
+              </p>
+              <ul>
+                <li>(0.4)³ = 0.064</li>
+                <li>Tₘ² = 0.064, so Tₘ ≈ 0.253 years (≈92.3 days)</li>
+              </ul>
+              <p>Tap to freeze Mercury’s orbit and overlay its period.</p>
+            </div>
+            <div class="law-viz" id="kepler-example-viz">
+              <div class="loading"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script></script>
+  </body>
+</html>

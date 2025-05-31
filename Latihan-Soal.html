@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latihan Soal - Hukum Newton tentang Gravitasi</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #e0f2f1;
+      margin: 0;
+      padding: 0 15px 50px;
+      min-height: 100vh;
+      line-height: 1.6;
+      user-select: none;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 80px;
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #a9d6e5;
+      text-shadow: 0 2px 8px #0008;
+      user-select: text;
+    }
+    nav {
+      background-color: #144552;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 12px 20px;
+      box-shadow: 0 2px 8px rgb(60 174 163 / 0.4);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
+    nav a {
+      color: #a9d6e5;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    nav a:hover, nav a:focus {
+      background: #3caea3;
+      color: #fff;
+      outline: none;
+    }
+    .content {
+      max-width: 900px;
+      margin: 20px auto 40px;
+      user-select: text;
+    }
+    .soal-container {
+      background: rgba(60, 174, 163, 0.12);
+      border-radius: 15px;
+      padding: 30px 40px;
+      box-shadow: 0 0 15px rgb(60 174 163 / 0.4);
+      user-select: none;
+    }
+    .soal {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      border: 1px solid rgba(169, 214, 229, 0.3);
+      box-shadow: 0 3px 8px rgba(60, 174, 163, 0.25);
+      user-select: text;
+    }
+    .soal h3 {
+      margin-top: 0;
+      color: #bde0fe;
+      user-select: text;
+    }
+    .soal p {
+      color: #d4f1f4;
+    }
+    .options {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .option {
+      padding: 12px 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      box-shadow: 0 2px 6px rgba(60, 174, 163, 0.15);
+      color: #e0f2f1;
+      user-select: none;
+      font-weight: 600;
+    }
+    .option:hover, .option:focus {
+      background: #3caea3;
+      color: #fff;
+      outline: none;
+    }
+    .option.selected {
+      background: #159895;
+      color: #fff;
+      box-shadow: 0 0 12px #159895aa;
+    }
+    @media (max-width: 600px) {
+      .content {
+        margin: 80px 15px 40px;
+      }
+      .soal-container {
+        padding: 20px 20px;
+      }
+      .option {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav id="nav">
+    <a href="Home.html" class="nav-button">Home</a>
+    <a href="Kompetensi.html" class="nav-button">Kompetensi</a>
+    <a href="Petunjuk-Penggunaan-Website.html" class="nav-button">Petunjuk Penggunaan Website</a>
+    <a href="Materi-Pembelajaran.html" class="nav-button">Materi Pembelajaran</a>
+    <a href="Latihan-Soal.html" class="nav-button" aria-current="page">Latihan Soal</a>
+    <a href="Kunci-Jawaban.html" class="nav-button">Kunci Jawaban</a>
+    <a href="Glosarium.html" class="nav-button">Glosarium</a>
+    <a href="Tentang-Penulis.html" class="nav-button">Tentang Penulis</a>
+  </nav>
+
+  <div class="content">
+    <h1>Latihan Soal</h1>
+    <div class="soal-container">
+      <div class="soal" data-soal="1">
+        <h3>Soal 1</h3>
+        <p>Menurut hukum gravitasi Newton, gaya gravitasi antara dua benda:</p>
+        <div class="options">
+          <div class="option" tabindex="0" data-option="a">a) Berbanding lurus dengan massa masing-masing benda</div>
+          <div class="option" tabindex="0" data-option="b">b) Berbanding terbalik dengan kuadrat jarak antara kedua benda</div>
+          <div class="option" tabindex="0" data-option="c">c) Tidak bergantung pada konstanta gravitasi universal</div>
+          <div class="option" tabindex="0" data-option="d">d) Berbanding lurus dengan jarak antara kedua benda</div>
+        </div>
+      </div>
+
+      <div class="soal" data-soal="2">
+        <h3>Soal 2</h3>
+        <p>Hukum Kepler pertama menyatakan bahwa:</p>
+        <div class="options">
+          <div class="option" tabindex="0" data-option="a">a) Planet bergerak dalam orbit berbentuk lingkaran</div>
+          <div class="option" tabindex="0" data-option="b">b) Planet bergerak dalam orbit berbentuk elips dengan Matahari di pusat</div>
+          <div class="option" tabindex="0" data-option="c">c) Planet bergerak dalam orbit berbentuk elips dengan Matahari di salah satu fokus</div>
+          <div class="option" tabindex="0" data-option="d">d) Planet bergerak dengan kecepatan konstan</div>
+        </div>
+      </div>
+
+      <div class="soal" data-soal="3">
+        <h3>Soal 3</h3>
+        <p>Jika periode orbit sebuah planet adalah T dan jarak rata-rata ke Matahari adalah R, maka menurut hukum Kepler ketiga:</p>
+        <div class="options">
+          <div class="option" tabindex="0" data-option="a">a) T² ∝ R³</div>
+          <div class="option" tabindex="0" data-option="b">b) T ∝ R²</div>
+          <div class="option" tabindex="0" data-option="c">c) T³ ∝ R²</div>
+          <div class="option" tabindex="0" data-option="d">d) T ∝ R³</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const soalElements = document.querySelectorAll('.soal');
+
+    // Fungsi untuk simpan pilihan ke localStorage
+    function saveAnswer(soalId, optionId) {
+      let saved = JSON.parse(localStorage.getItem('latihanSoalAnswers') || '{}');
+      saved[soalId] = optionId;
+      localStorage.setItem('latihanSoalAnswers', JSON.stringify(saved));
+    }
+
+    // Fungsi untuk load jawaban dari localStorage
+    function loadAnswers() {
+      let saved = JSON.parse(localStorage.getItem('latihanSoalAnswers') || '{}');
+      soalElements.forEach(soal => {
+        const soalId = soal.dataset.soal;
+        const pilihan = saved[soalId];
+        if (pilihan) {
+          // Hapus kelas selected dulu
+          soal.querySelectorAll('.option').forEach(opt => {
+            opt.classList.remove('selected');
+          });
+          // Tambah kelas selected di opsi yang sesuai
+          const optionEl = soal.querySelector(`.option[data-option="${pilihan}"]`);
+          if (optionEl) optionEl.classList.add('selected');
+        }
+      });
+    }
+
+    // Tambah event listener klik tiap opsi
+    soalElements.forEach(soal => {
+      soal.querySelectorAll('.option').forEach(option => {
+        option.addEventListener('click', () => {
+          // Hapus semua selected di soal ini
+          soal.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+          // Tambah selected di opsi yang diklik
+          option.classList.add('selected');
+
+          // Simpan pilihan
+          saveAnswer(soal.dataset.soal, option.dataset.option);
+        });
+
+        // Juga support keyboard (Enter & Space)
+        option.addEventListener('keydown', e => {
+          if(e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            option.click();
+          }
+        });
+      });
+    });
+
+    loadAnswers();
+  });
+</script>
+
+</body>
+</html>

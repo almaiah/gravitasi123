@@ -1,0 +1,117 @@
+#kompetensi {
+    margin-top: 60px; /* Geser isi ke bawah */
+    padding: 20px;
+}
+
+.kompetensi-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background: rgba(0, 10, 30, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kompetensi-content {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.kompetensi-text {
+    line-height: 1.8;
+}
+
+.kompetensi-text p {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+/* Heading Styles */
+.kompetensi-container h2 {
+    color: #4a90e2;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(74, 144, 226, 0.3);
+}
+
+/* List Styles */
+.kompetensi-text ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.kompetensi-text li {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Highlight Important Text */
+.highlight {
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #kompetensi {
+        margin-top: 40px;
+        padding: 10px;
+    }
+
+    .kompetensi-container {
+        padding: 20px;
+    }
+
+    .kompetensi-content {
+        padding: 15px;
+    }
+
+    .kompetensi-text p {
+        font-size: 15px;
+    }
+
+    .kompetensi-container h2 {
+        font-size: 20px;
+    }
+}
+
+/* Animation */
+.kompetensi-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .kompetensi-container {
+        box-shadow: none;
+        background: white;
+        color: black;
+    }
+
+    .kompetensi-content {
+        background: none;
+        border: 1px solid #ddd;
+    }
+
+    .kompetensi-container h2 {
+        color: #000;
+        border-bottom-color: #000;
+    }
+}

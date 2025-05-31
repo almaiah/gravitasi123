@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Glosarium - Hukum Newton tentang Gravitasi</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0 15px 50px;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #a9d6e5;
+    text-shadow: 0 2px 8px #0008;
+    font-weight: 700;
+    font-size: 2.8rem;
+  }
+
+  nav {
+    background-color: #144552;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 12px 20px;
+    box-shadow: 0 2px 8px rgb(60 174 163 / 0.4);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  nav a {
+    color: #a9d6e5;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  nav a:hover, nav a:focus {
+    background: #3caea3;
+    color: #fff;
+    outline: none;
+  }
+
+  .glosarium-container {
+    max-width: 900px;
+    margin: 90px auto 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 0 0 15px rgb(60 174 163 / 0.4);
+    user-select: none;
+  }
+
+  .kategori {
+    margin-bottom: 40px;
+  }
+
+  .kategori h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #203a43;
+    padding-bottom: 5px;
+    margin-top: 40px;
+    margin-bottom: 24px;
+    color: #a9d6e5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: text;
+  }
+
+  .kategori h2::before {
+    content: '🪐';
+    font-size: 1.8rem;
+  }
+
+  /* Kartu istilah */
+  .istilah {
+    background: rgba(60, 174, 163, 0.12);
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 10px rgba(60, 174, 163, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+    perspective: 800px;
+  }
+
+  .istilah:hover {
+    background: rgba(60, 174, 163, 0.25);
+    box-shadow: 0 8px 20px rgba(60, 174, 163, 0.3);
+  }
+
+  .istilah h3 {
+    margin: 0;
+    padding: 16px 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #d4f1f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: text;
+    position: relative;
+    z-index: 2;
+  }
+
+  .istilah h3 span.icon {
+    display: inline-block;
+    font-size: 1.4rem;
+    transition: transform 0.4s ease;
+    transform-origin: center;
+    user-select: none;
+  }
+
+  .istilah.active h3 span.icon {
+    transform: rotate(90deg);
+  }
+
+  .istilah p {
+    max-height: 0;
+    margin: 0 20px;
+    padding: 0;
+    color: #c7e3e9;
+    line-height: 1.5;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease, opacity 0.5s ease;
+    user-select: text;
+  }
+
+  .istilah.active p {
+    max-height: 500px;
+    padding-top: 12px;
+    opacity: 1;
+  }
+
+  @media (max-width: 600px) {
+    .glosarium-container {
+      padding: 20px 20px;
+      margin: 90px 10px 30px;
+    }
+
+    nav {
+      gap: 8px;
+    }
+
+    nav a {
+      padding: 6px 10px;
+      font-size: 0.9rem;
+    }
+
+    .kategori h2 {
+      font-size: 1.5rem;
+    }
+
+    .istilah h3 {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="Home.html">Home</a>
+  <a href="Kompetensi.html">Kompetensi</a>
+  <a href="Petunjuk-Penggunaan-Website.html">Petunjuk Penggunaan Website</a>
+  <a href="Materi-Pembelajaran.html">Materi Pembelajaran</a>
+  <a href="Latihan-Soal.html">Latihan Soal</a>
+  <a href="Kunci-Jawaban.html">Kunci Jawaban</a>
+  <a href="Glosarium.html" aria-current="page">Glosarium</a>
+  <a href="Tentang-Penulis.html">Tentang Penulis</a>
+</nav>
+
+<div class="glosarium-container">
+  <h1>Glosarium</h1>
+
+  <div class="kategori">
+    <h2>Konsep Dasar Gravitasi</h2>
+    <div class="istilah">
+      <h3>Gravitasi Universal <span class="icon">▶</span></h3>
+      <p>Gaya tarik-menarik yang terjadi antara semua partikel yang memiliki massa di alam semesta. Gaya ini sebanding dengan hasil kali massa partikel dan berbanding terbalik dengan kuadrat jarak antara keduanya.</p>
+    </div>
+    <div class="istilah">
+      <h3>Konstanta Gravitasi Universal (G) <span class="icon">▶</span></h3>
+      <p>Konstanta fundamental yang menentukan kekuatan interaksi gravitasi. Nilainya adalah 6,67430 × 10⁻¹¹ m³ kg⁻¹ s⁻².</p>
+    </div>
+    <div class="istilah">
+      <h3>Gaya Gravitasi <span class="icon">▶</span></h3>
+      <p>Gaya tarik menarik antara dua buah benda yang saling berinteraksi, yang besarnya sebanding dengan perkalian massa-massa nya tetapi berbanding terbalik dengan kuadrat jarak antar pusat massa yang dari kedua benda tersebut.</p>
+    </div>
+    <div class="istilah">
+      <h3>Medan Gravitasi <span class="icon">▶</span></h3>
+      <p>Daerah di sekitar benda tertentu yang masih dipengaruhi gaya gravitasi.</p>
+    </div>
+    <div class="istilah">
+      <h3>Potensial Gravitasi <span class="icon">▶</span></h3>
+      <p>Besaran energi potensial per satuan massa.</p>
+    </div>
+  </div>
+
+  <div class="kategori">
+    <h2>Hukum Kepler</h2>
+    <div class="istilah">
+      <h3>Orbit Elips <span class="icon">▶</span></h3>
+      <p>Jalur berbentuk elips yang dilalui planet dalam pergerakannya mengelilingi Matahari, dengan Matahari berada di salah satu fokus elips tersebut.</p>
+    </div>
+    <div class="istilah">
+      <h3>Sumbu Semi-mayor <span class="icon">▶</span></h3>
+      <p>Setengah dari sumbu terpanjang elips. Dalam konteks orbit planet, ini merepresentasikan jarak rata-rata planet ke Matahari.</p>
+    </div>
+    <div class="istilah">
+      <h3>Eksentrisitas <span class="icon">▶</span></h3>
+      <p>Ukuran seberapa jauh bentuk elips menyimpang dari bentuk lingkaran. Nilai eksentrisitas berkisar dari 0 (lingkaran sempurna) hingga 1 (parabola).</p>
+    </div>
+    <div class="istilah">
+      <h3>Gaya Sentripetal <span class="icon">▶</span></h3>
+      <p>Gaya yang mengarahkan planet agar tetap berada pada orbit melingkar atau elips dengan mengarah ke pusat lintasan orbit.</p>
+    </div>
+    <div class="istilah">
+      <h3>Kecepatan Orbit <span class="icon">▶</span></h3>
+      <p>Kecepatan benda langit dalam bergerak pada orbitnya mengelilingi benda pusat.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Script untuk buka tutup definisi glosarium saat klik istilah
+  document.querySelectorAll('.istilah').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+</script>
+</body>
+</html>

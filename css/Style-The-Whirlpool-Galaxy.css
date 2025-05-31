@@ -1,0 +1,176 @@
+body {
+      background-color: #020817;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .center-image {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    img {
+      border: 2px solid #fff;
+      border-radius: 10px;
+      max-width: 90%;
+      height: auto;
+    }
+    p.credit {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .buttons {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .buttons button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background-color: #0f172a;
+      color: white;
+      transition: background-color 0.3s;
+    }
+    .buttons button:hover {
+      background-color: #1e293b;
+    }
+    
+    /* Welcome Splash Screen Styles */
+    #welcome-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, #0a192f, #020c1b);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        transition: opacity 1s ease-out;
+    }
+
+    .welcome-logo {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 30px;
+        background: radial-gradient(circle, #ff9500, #ff5e00);
+        border-radius: 50%;
+        box-shadow: 0 0 60px rgba(255, 94, 0, 0.6);
+        animation: pulse 2s infinite;
+    }
+
+    .welcome-text {
+        color: white;
+        font-size: 28px;
+        text-align: center;
+        margin: 20px 0;
+        opacity: 0;
+        animation: fadeInText 1s forwards 0.5s;
+    }
+
+    .welcome-description {
+        color: #a8b2d1;
+        max-width: 600px;
+        text-align: center;
+        margin: 0 20px;
+        line-height: 1.6;
+        opacity: 0;
+        animation: fadeInText 1s forwards 1s;
+    }
+
+    .start-button {
+        margin-top: 40px;
+        padding: 15px 30px;
+        font-size: 18px;
+        color: white;
+        background: transparent;
+        border: 2px solid #ff5e00;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        opacity: 0;
+        animation: fadeInText 1s forwards 1.5s;
+    }
+
+    .start-button:hover {
+        background: rgba(255, 94, 0, 0.2);
+        transform: translateY(-2px);
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0.95);
+            box-shadow: 0 0 40px rgba(255, 94, 0, 0.5);
+        }
+        50% {
+            transform: scale(1.05);
+            box-shadow: 0 0 70px rgba(255, 94, 0, 0.7);
+        }
+        100% {
+            transform: scale(0.95);
+            box-shadow: 0 0 40px rgba(255, 94, 0, 0.5);
+        }
+    }
+
+    @keyframes fadeInText {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .welcome-logo {
+            width: 150px;
+            height: 150px;
+        }
+
+        .welcome-text {
+            font-size: 24px;
+        }
+
+        .welcome-description {
+            font-size: 14px;
+            margin: 0 15px;
+        }
+
+        .start-button {
+            padding: 12px 25px;
+            font-size: 16px;
+        }
+    }
+
+    /* Mobile Optimization */
+    @media (max-width: 480px) {
+        .welcome-logo {
+            width: 120px;
+            height: 120px;
+        }
+
+        .welcome-text {
+            font-size: 20px;
+        }
+
+        .start-button {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+    }
+
+    /* High DPI Screens */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .welcome-logo {
+            box-shadow: 0 0 80px rgba(255, 94, 0, 0.7);
+        }
+    }

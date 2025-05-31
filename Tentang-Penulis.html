@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tentang Penulis - Hukum Newton tentang Gravitasi</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #144552;
+      padding: 12px 20px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      box-shadow: 0 2px 8px rgb(60 174 163 / 0.4);
+    }
+
+    .nav-button {
+      color: #a9d6e5;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+
+    .nav-button:hover,
+    .nav-button[aria-current="page"] {
+      background-color: #3caea3;
+      color: #fff;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 80px auto 40px;
+      padding: 30px 40px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgb(60 174 163 / 0.4);
+    }
+
+    h1 {
+      font-size: 2.3em;
+      color: #a9d6e5;
+      text-align: center;
+      margin-bottom: 40px;
+      border-bottom: 2px solid #203a43;
+      padding-bottom: 10px;
+    }
+
+    .profile-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .profile-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 15px;
+      width: 260px;
+      box-shadow: 0 0 15px rgba(60,174,163,0.4);
+      text-align: center;
+    }
+
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 15px;
+      border: 3px solid #3caea3;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-card h2 {
+      margin: 10px 0 5px;
+      color: #a9d6e5;
+    }
+
+    .profile-card p {
+      margin: 5px 0;
+      font-size: 0.95em;
+      color: #d4f1f4;
+    }
+
+    .bio {
+      font-size: 0.9em;
+      color: #ddd;
+    }
+
+    .email {
+      color: #ffcc99;
+      font-size: 0.88em;
+    }
+
+    .aspirasi-section {
+      margin-top: 60px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(60,174,163,0.4);
+    }
+
+    .aspirasi-section h2 {
+      color: #a9d6e5;
+      margin-bottom: 15px;
+    }
+
+    .aspirasi-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .aspirasi-section input, .aspirasi-section textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      background-color: rgba(255, 255, 255, 0.07);
+      color: #fff;
+    }
+
+    .aspirasi-section textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .aspirasi-section button {
+      padding: 10px;
+      background-color: #3caea3;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .aspirasi-section button:hover {
+      background-color: #2b8a7e;
+    }
+
+    .footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 20px 15px;
+        margin: 80px 10px 40px;
+      }
+
+      .profile-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="nav">
+    <a href="Home.html" class="nav-button">Home</a>
+    <a href="Kompetensi.html" class="nav-button">Kompetensi</a>
+    <a href="Petunjuk-Penggunaan-Website.html" class="nav-button">Petunjuk Penggunaan Website</a>
+    <a href="Materi-Pembelajaran.html" class="nav-button">Materi Pembelajaran</a>
+    <a href="Latihan-Soal.html" class="nav-button">Latihan Soal</a>
+    <a href="Kunci-Jawaban.html" class="nav-button">Kunci Jawaban</a>
+    <a href="Glosarium.html" class="nav-button">Glosarium</a>
+    <a href="Tentang-Penulis.html" class="nav-button" aria-current="page">Tentang Penulis</a>
+  </nav>
+
+  <div class="content">
+    <h1>Tentang Penulis</h1>
+    <div class="profile-grid">
+
+      <div class="profile-card">
+        <div class="profile-image">
+          <img src="texture/siti.jpg" alt="Siti Almaidah" onerror="this.src='texture/default-profile.png'">
+        </div>
+        <h2>Siti Almaidah</h2>
+        <p>NIM: 2309244</p>
+        <p class="email">Email: sitialmaidah2912@upi.edu</p>
+        <div class="bio">Mahasiswa Pendidikan Fisika UPI kelas 4B.</div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-image">
+          <img src="texture/dewi.jpg" alt="Dewi Alya Pramanik" onerror="this.src='texture/default-profile.png'">
+        </div>
+        <h2>Dewi Alya Pramanik</h2>
+        <p>NIM: 2307941</p>
+        <p class="email">Email: dewialya@upi.edu</p>
+        <div class="bio">Mahasiswa Pendidikan Fisika UPI kelas 4B.</div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-image">
+          <img src="texture/sofi.jpg" alt="Sofi Arifaturrizki" onerror="this.src='texture/default-profile.png'">
+        </div>
+        <h2>Sofi Arifaturrizki</h2>
+        <p>NIM: 2308330</p>
+        <p class="email">Email: sofiarifaturrizki@upi.edu</p>
+        <div class="bio">Mahasiswa Pendidikan Fisika UPI kelas 4B.</div>
+      </div>
+
+    </div>
+
+    <div class="aspirasi-section">
+      <h2>Kritik & Saran</h2>
+      <form action="https://formsubmit.co/sitialmaidah2912@upi.edu" method="POST">
+        <input type="hidden" name="_subject" value="Kritik & Saran dari Website" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="Nama" placeholder="Nama Anda" required />
+        <input type="email" name="Email" placeholder="Email Anda" required />
+        <textarea name="Pesan" placeholder="Tulis kritik atau saran Anda di sini..." required></textarea>
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+
+    <div class="footer">
+      <p>Prodi Pendidikan Fisika, Universitas Pendidikan Indonesia - Kelas 4B</p>
+    </div>
+  </div>
+
+</body>
+</html>

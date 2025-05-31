@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kompetensi - Hukum Newton tentang Gravitasi</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a1f2d, #144552);
+      color: #e6edf3;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    nav {
+      background-color: #144552;
+      padding: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      border-bottom: 2px solid #3caea3;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    .nav-button {
+      color: #e6edf3;
+      background-color: #0f3b4a;
+      padding: 10px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .nav-button:hover,
+    .nav-button:focus {
+      background-color: #3caea3;
+      color: #0a1f2d;
+      box-shadow: 0 4px 10px rgba(60, 174, 163, 0.7);
+    }
+
+    main {
+      padding: 110px 20px 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #3caea3;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .flashcard {
+      border-radius: 16px;
+      background: linear-gradient(145deg, #103544, #0f3b4a);
+      margin-bottom: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .flashcard:hover {
+      transform: scale(1.02);
+    }
+
+    .flashcard-header {
+      background: linear-gradient(to right, #3caea3, #2b8c84);
+      color: #0a1f2d;
+      padding: 18px 22px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.1rem;
+      user-select: none;
+    }
+
+    .flashcard-content {
+      display: none;
+      padding: 20px 22px;
+      background: linear-gradient(135deg, #0e2e3d, #165870);
+      color: #dff6f7;
+      font-size: 1rem;
+      line-height: 1.6;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .flashcard.open .flashcard-content {
+      display: block;
+    }
+
+    .flashcard-content p {
+      margin: 10px 0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <nav>
+    <a href="Home.html" class="nav-button">Home</a>
+    <a href="Kompetensi.html" class="nav-button" aria-current="page">Kompetensi</a>
+    <a href="Petunjuk-Penggunaan-Website.html" class="nav-button">Petunjuk Penggunaan Website</a>
+    <a href="Materi-Pembelajaran.html" class="nav-button">Materi Pembelajaran</a>
+    <a href="Latihan-Soal.html" class="nav-button">Latihan Soal</a>
+    <a href="Kunci-Jawaban.html" class="nav-button">Kunci Jawaban</a>
+    <a href="Glosarium.html" class="nav-button">Glosarium</a>
+    <a href="Tentang-Penulis.html" class="nav-button">Tentang Penulis</a>
+  </nav>
+
+  <!-- Flashcard Section -->
+  <main>
+    <h2>Kompetensi Inti & Dasar</h2>
+
+    <div class="flashcard">
+      <div class="flashcard-header">Kompetensi Inti (KI)</div>
+      <div class="flashcard-content">
+        <p><strong>KI 3:</strong> Memahami, menerapkan, menganalisis pengetahuan faktual, konseptual, prosedural berdasarkan rasa ingin tahunya tentang ilmu pengetahuan, teknologi, seni, budaya, dan humaniora dengan wawasan kemanusiaan, kebangsaan, kenegaraan, dan peradaban terkait fenomena dan kejadian, serta menerapkan pengetahuan prosedural pada bidang kajian yang spesifik sesuai dengan bakat dan minatnya untuk memecahkan masalah.</p>
+        <p><strong>KI 4:</strong> Mengolah, menalar, dan menyaji dalam ranah konkret dan ranah abstrak terkait dengan pengembangan dari yang dipelajarinya di sekolah secara mandiri, dan mampu menggunakan metoda sesuai kaidah keilmuan.</p>
+      </div>
+    </div>
+
+    <div class="flashcard">
+      <div class="flashcard-header">Kompetensi Dasar (KD)</div>
+      <div class="flashcard-content">
+        <p><strong>3.8:</strong> Menganalisis keteraturan gerak planet dan satelit dalam tatasurya berdasarkan hukum-hukum Newton.</p>
+        <p><strong>4.8:</strong> Menyajikan karya mengenai gerak satelit buatan yang mengorbit bumi, pemanfaatan dan dampak yang ditimbulkannya dari penelusuran berbagai sumber informasi.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Script Flashcard -->
+  <script>
+    document.querySelectorAll('.flashcard-header').forEach(header => {
+      header.addEventListener('click', () => {
+        header.parentElement.classList.toggle('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

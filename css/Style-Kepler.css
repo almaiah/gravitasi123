@@ -1,0 +1,522 @@
+/* Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+      body {
+        background-color: #050e1a;
+        color: #fff;
+        touch-action: manipulation;
+        position: fixed;
+      }
+      /* Splash Screen */
+      #splash-screen {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #050e1a;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        transition: opacity 1.5s ease-out;
+      }
+      #splash-logo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: radial-gradient(circle, #ff9500, #ff5e00);
+        box-shadow: 0 0 60px rgba(255, 94, 0, 0.6);
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(0.95);
+          box-shadow: 0 0 40px rgba(255, 94, 0, 0.5);
+        }
+        50% {
+          transform: scale(1.05);
+          box-shadow: 0 0 70px rgba(255, 94, 0, 0.7);
+        }
+        100% {
+          transform: scale(0.95);
+          box-shadow: 0 0 40px rgba(255, 94, 0, 0.5);
+        }
+      }
+      .splash-text {
+        margin-top: 20px;
+        font-size: 24px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        opacity: 0;
+        animation: fadeIn 2s forwards 0.5s;
+        text-align: center;
+        padding: 0 15px;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      /* Main Container */
+      .container {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+      /* Solar System Visualization */
+      #solar-system {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+      #controls {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background: rgba(0, 10, 30, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 12px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        max-height: 80vh;
+        overflow-y: auto;
+        z-index: 10;
+        width: 300px;
+      }
+
+      #toggle-controls:hover {
+        background: #ff9500;
+      }
+      #info-panel {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: calc(100% - 20px);
+        max-height: 70vh;
+        overflow-y: auto;
+        background: rgba(0, 10, 30, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+        z-index: 30;
+      }
+      /* When active, show the info panel */
+      #info-panel.active {
+        display: block;
+        transform: translateX(0);
+      }
+      #info-panel .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        border: none;
+        background: transparent;
+        color: white;
+        cursor: pointer;
+        z-index: 31;
+      }
+      .info-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .planet-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 12px;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+      }
+      .planet-title {
+        font-size: 20px;
+        margin: 0;
+      }
+      .info-content {
+        margin-top: 10px;
+      }
+      .info-content p {
+        margin-bottom: 10px;
+        line-height: 1.5;
+        font-size: 14px;
+      }
+      .adjust-panel {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .adjust-panel h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .adjust-panel .input-group {
+        margin-bottom: 10px;
+      }
+      .adjust-panel label {
+        font-size: 13px;
+        color: #ccc;
+        display: block;
+        margin-bottom: 4px;
+      }
+      .adjust-panel input[type="range"] {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        height: 5px;
+        border-radius: 5px;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      .adjust-panel input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 18px;
+        height: 18px;
+        background: #ff5e00;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .adjust-panel input[type="range"]::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        background: #ff5e00;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+      }
+      .adjust-panel .value-display {
+        font-size: 13px;
+        color: #ccc;
+        margin-top: 2px;
+      }
+      .adjust-panel .button-group {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .adjust-panel .button-group button {
+        flex: 1;
+        background: #ff5e00;
+        border: none;
+        padding: 10px;
+        color: #fff;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-size: 14px;
+      }
+      .adjust-panel .button-group button:hover {
+        background: #ff9500;
+      }
+      /* Controls panel */
+      #controls .control-group {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      #controls .control-label {
+        font-size: 13px;
+        color: #aaa;
+      }
+      #controls input[type="range"] {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        height: 5px;
+        border-radius: 5px;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      #controls input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        background: #ff5e00;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      #controls input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        background: #ff5e00;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+      }
+      /* Reset Controls Button (and other control buttons) */
+      #reset-controls,
+      .control-button {
+        background: #ff5e00;
+        border: none;
+        padding: 10px;
+        color: #fff;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-size: 14px;
+      }
+      #reset-controls:hover,
+      .control-button:hover {
+        background: #ff9500;
+      }
+      .nav-button,
+      #controls,
+      #info-panel,
+      .control-label {
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      /* Navigation */
+      nav {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        z-index: 20;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      nav.lessons {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 10, 30, 0.9);
+        padding: 8px;
+        z-index: 1000;
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+      }
+      .nav-button {
+        background: rgba(0, 10, 30, 0.8);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 12px 15px;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-right: 6px;
+        cursor: pointer;
+        transition: background 0.3s;
+        min-height: 44px;
+        font-size: 14px;
+        display: inline-block;
+      }
+      .nav-button:hover,
+      .nav-button:active {
+        background: rgba(0, 20, 60, 0.9);
+      }
+      /* Lessons Section */
+      #kepler-laws {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 60px);
+        background: #050e1a;
+        z-index: 5;
+        padding: 15px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      /* Kepler's Laws Visualization Styles */
+#kepler-laws {
+    padding-top: 60px;
+}
+
+.law-container {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background: rgba(0, 10, 30, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.law-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.law-text {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.law-viz {
+    flex: 1;
+    min-height: 300px;
+    background: rgba(0, 5, 15, 0.5);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.law-viz canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Visualization Controls */
+.viz-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+}
+
+.viz-button {
+    background: rgba(74, 144, 226, 0.7);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.viz-button:hover {
+    background: rgba(74, 144, 226, 0.9);
+}
+
+/* Mathematical Formulas */
+.formula {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 15px 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Interactive Elements */
+.interactive-element {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.interactive-element:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .law-content {
+        flex-direction: row;
+    }
+
+    .law-text, .law-viz {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .law-viz {
+        min-height: 250px;
+    }
+
+    .viz-controls {
+        flex-wrap: wrap;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Tooltips */
+.tooltip {
+    position: absolute;
+    background: rgba(0, 10, 30, 0.9);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip.visible {
+    opacity: 1;
+}
+
+/* Parameter Controls */
+.parameter-controls {
+    background: rgba(0, 10, 30, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.parameter-control {
+    margin: 10px 0;
+}
+
+.parameter-control label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4a90e2;
+}
+
+.parameter-control input[type="range"] {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.parameter-value {
+    font-size: 14px;
+    color: #aaa;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Materi Pembelajaran - Hukum Gravitasi Newton</title>
+  
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      background-color: #001020;
+      color: #cce9e6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      line-height: 1.6;
+    }
+    nav#nav {
+      background-color: #004d40;
+      padding: 10px 20px;
+      display: flex;
+      gap: 15px;
+    }
+    nav#nav a.nav-button {
+      color: #a0f0d9;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    nav#nav a.nav-button:hover {
+      background-color: #00796b;
+    }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 40px 20px 20px; /* <-- padding top ditambah supaya judul tidak terlalu ke atas */
+      background: rgba(0,10,30,0.75);
+      border-radius: 15px;
+      box-shadow: 0 0 15px #00897b;
+    }
+    h1, h2 {
+      color: #4db6ac;
+      user-select: text;
+      margin-top: 0; /* reset margin atas agar konsisten */
+    }
+    h3 {
+      color: #80cbc4;
+    }
+    p {
+      margin-bottom: 1em;
+    }
+    ul {
+      margin-left: 1.5em;
+      margin-bottom: 1em;
+    }
+    .image-container {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .image-container img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 12px #004d40;
+    }
+    .caption {
+      color: #80cbc4;
+      font-size: 0.9rem;
+      margin-top: 6px;
+      font-style: italic;
+      user-select: text;
+    }
+    code {
+      background: rgba(0, 77, 64, 0.6);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      user-select: text;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <nav id="nav" role="navigation" aria-label="Menu Navigasi Utama">
+    <a href="Home.html" class="nav-button">Home</a>
+    <a href="Kompetensi.html" class="nav-button">Kompetensi</a>
+    <a href="Petunjuk-Penggunaan-Website.html" class="nav-button">Petunjuk Penggunaan Website</a>
+    <a href="Materi-Pembelajaran.html" class="nav-button">Materi Pembelajaran</a>
+    <a href="Latihan-Soal.html" class="nav-button">Latihan Soal</a>
+    <a href="Kunci-Jawaban.html" class="nav-button">Kunci Jawaban</a>
+    <a href="Glosarium.html" class="nav-button">Glosarium</a>
+    <a href="Tentang-Penulis.html" class="nav-button">Tentang Penulis</a>
+  </nav>
+
+  <main role="main" aria-labelledby="main-title">
+    <h1 id="main-title">Hukum Gravitasi Newton</h1>
+
+    <section>
+      <h2>Menemukan Massa Bumi dan Hukum Gravitasi Universal Newton</h2>
+      <p><strong>Tahukah kamu?</strong><br />
+      Massa Bumi diperkirakan sekitar <code>6 × 10²⁴ kg</code>. Tapi... bagaimana para ilmuwan bisa mengetahui berat sebuah planet yang bahkan tidak bisa kita angkat sedikit pun? Jawabannya ada pada Hukum Gravitasi Universal yang ditemukan oleh Isaac Newton.</p>
+    </section>
+
+    <section>
+      <h3>Apel Jatuh dan Inspirasi Besar</h3>
+      <div class="image-container">
+        <img src="images/apel-jatuh.jpg" alt="Ilustrasi buah apel yang jatuh dari pohonnya" />
+        <div class="caption">Gambar 2. Ilustrasi buah apel yang jatuh dari pohonnya. Sumber: Pinterest</div>
+      </div>
+      <p>Dikisahkan bahwa Newton sedang duduk di bawah pohon ketika sebuah apel jatuh dan menghantam kepalanya. Kejadian ini membuatnya berpikir: “Mengapa apel jatuh ke bawah? Apakah ada gaya tertentu yang menariknya?”</p>
+      <p>Dari sini, Newton mengembangkan ide bahwa semua benda di alam semesta saling tarik-menarik, tidak hanya apel dan bumi, tetapi semua benda bermassa.</p>
+    </section>
+
+    <section>
+      <h3>Apa Itu Gaya Gravitasi?</h3>
+      <p>Gravitasi adalah gaya tarik-menarik antara dua benda yang memiliki massa. Artinya:</p>
+      <ul>
+        <li>Apel tertarik ke Bumi</li>
+        <li>Bumi juga tertarik ke apel</li>
+        <li>Bahkan kamu dan benda di sekitarmu pun saling tarik-menarik (meski sangat lemah)</li>
+      </ul>
+      <p>Lalu, mengapa kita tidak merasakan tarikan benda-benda di sekitar kita? Jawabannya karena:</p>
+      <ul>
+        <li>Massa benda-benda di sekitar kita sangat kecil dibanding Bumi.</li>
+        <li>Jaraknya terlalu dekat untuk memberikan dampak besar secara gravitasi.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Bagaimana Gaya Gravitasi Bekerja?</h3>
+      <p>Gaya gravitasi dipengaruhi oleh dua hal utama:</p>
+      <ul>
+        <li><strong>Massa kedua benda :</strong> Semakin besar massanya, semakin besar gaya gravitasinya.</li>
+        <li><strong>Jarak antara kedua benda :</strong> Semakin jauh jaraknya, semakin kecil gaya gravitasinya.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Newton dan Bulan yang "Jatuh"</h3>
+      <p>Newton menyadari bahwa Bulan seperti apel yang jatuh ke Bumi. Hanya saja, Bulan "terus jatuh" tetapi tidak pernah menabrak Bumi karena kecepatannya menjaga orbitnya.</p>
+      <p>Dari analisis pergerakan Bulan dan planet, Newton akhirnya menyusun sebuah hukum yang dikenal sebagai:</p>
+      <h2>Hukum Gravitasi Universal Newton</h2>
+      <p>“Setiap partikel di alam semesta saling menarik satu sama lain dengan gaya yang sebanding dengan hasil kali massa keduanya, dan berbanding terbalik dengan kuadrat jarak antara pusat massa mereka.”</p>
+      <p>“Every particle in the Universe attracts every other particle with a force that is directly proportional to the product of their masses and inversely proportional to the square of the distance between them.”</p>
+    </section>
+
+    <section>
+      <div class="image-container">
+        <img src="images/dua-benda-massa.jpg" alt="Ilustrasi dua buah benda yang memiliki massa" />
+        <div class="caption">Gambar 3: Ilustrasi dua buah benda yang memiliki massa. Sumber: pembelajaranfisikauny.blogspot.com</div>
+      </div>
+      <p>Misalkan massa benda satu adalah <code>m₁</code> dan massa benda kedua adalah <code>m₂</code> dan katakanlah jarak antar pusatnya disebut <code>r</code>. Maka gaya gravitasi antara kedua benda tersebut dituliskan secara matematis yaitu:</p>
+      <p style="text-align:center; font-weight:bold; font-size:1.4rem;">
+        F<sub>g</sub> = G × (m₁ × m₂) / r²
+      </p>
+      <p>Dimana <code>G</code> adalah konstanta, yang disebut konstanta gravitasi universal. Nilainya dalam satuan SI adalah:</p>
+      <p style="text-align:center; font-weight:bold; font-size:1.2rem;">
+        G = 6,674 × 10<sup>-11</sup> N·m²/kg²
+      </p>
+    </section>
+  </main>
+</body>
+</html>
